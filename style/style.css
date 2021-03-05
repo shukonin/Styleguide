@@ -1,0 +1,109 @@
+* {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 20rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+#colors,
+#fonts {
+  padding: 1rem;
+  border: 1px dashed lightslategray;
+}
+
+/* Colors */
+
+#colors-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.color-box {
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+#purple {
+  background-color: #693c72;
+  color: white;
+}
+
+#red {
+  background-color: #c15050;
+  color: white;
+}
+
+#orange {
+  background-color: #d97642;
+  color: white;
+}
+
+#white {
+  background-color: #f9f3f3;
+}
+
+/* Fonts */
+
+#fonts {
+  margin: 2rem 0;
+}
+
+#fonts-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4rem;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.font-box p,
+.font-box h3 {
+  font-family: inherit;
+}
+
+.font-box h3 {
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
