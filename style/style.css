@@ -10,25 +10,36 @@ body {
 
 h1 {
   font-size: 3.2rem;
-  border-bottom: 1px solid black;
+  font-family: 'Roboto Slab', serif;
 }
 
 h2 {
   font-size: 2.8rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 h3 {
   font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
   margin: 0;
 }
 
-p {
+p,
+li,
+a {
   font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
+}
+
+#main-title {
+  border-bottom: 1px solid black;
 }
 
 #colors,
-#fonts {
+#fonts,
+#font-styles {
   padding: 1rem;
   border: 1px dashed lightslategray;
 }
@@ -74,7 +85,7 @@ p {
 
 #fonts-container {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
 
@@ -106,4 +117,55 @@ p {
 .font-box h3 {
   margin-bottom: 2rem;
   font-weight: normal;
+}
+
+/* Font-styles */
+#font-styles-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.font-style h1,
+.font-style h2,
+.font-style h3,
+.font-style p {
+  margin: 0;
+  align-self: flex-end;
+}
+
+.font-style {
+  display: grid;
+}
+
+@media (max-width: 1600px) {
+  #font-styles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  body {
+    padding: 0 5rem;
+  }
+
+  #colors-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #fonts-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 0 3rem;
+  }
+
+  #colors-container,
+  #font-styles-container {
+    grid-template-columns: 1fr;
+  }
 }
